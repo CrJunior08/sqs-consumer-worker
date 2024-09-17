@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sqs_consumer_worker._2.Infrastructure.Messaging
+namespace sqs_consumer_worker.Model
 {
-    public class SqsSettings
+    public class AppSettings
     {
         public string QueueUrl { get; set; }
+        public int MaxMessages { get; set; }
+        public int WaitTimeSeconds { get; set; }
     }
 }
+
