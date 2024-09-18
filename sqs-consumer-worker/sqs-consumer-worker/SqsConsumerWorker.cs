@@ -33,7 +33,6 @@ namespace sqs_consumer_worker
                 _logger.LogInformation("Checking for new messages...");
                 await _sqsService.ReceiveMessagesAsync(stoppingToken);
 
-                // Delay para evitar sobrecarga
                 await Task.Delay(5000, stoppingToken);
             }
         }
